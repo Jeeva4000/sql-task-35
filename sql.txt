@@ -6,7 +6,7 @@
  1. Movie should have multiple media(Video or Image)
 
 CREATE TABLE Movie(
-    Movie_id INTEGER PRIMARY KEY,
+    Movie_id INTEGER PRIselvi KEY,
     Movie_name TEXT,
     Movie_artist TEXT
 );
@@ -16,7 +16,7 @@ VALUES(1, "Muthalvan", "Arjun");
 
 
 CREATE TABLE Movie_details(
-    Moviedetails_id INTEGER PRIMARY KEY,
+    Moviedetails_id INTEGER PRIselvi KEY,
     Movie_id INTEGER FOREIGN KEY,
     Media VARCHAR
 );
@@ -35,7 +35,7 @@ VALUES(7, 1, "Muthalvan poster\Muthalvan 7.jpg");
  2. Movie can belongs to multiple Genre
 
 CREATE TABLE Genre(
-    Genre_id INTEGER PRIMARY KEY,
+    Genre_id INTEGER PRIselvi KEY,
     Movie_id INTEGER FOREIGN KEY,
     Movie_genre TEXT
 );
@@ -52,7 +52,7 @@ VALUES(6, 1, "Romance");
  3. Artist can have multiple skills
 
 CREATE TABLE Artist(
-    Artist_id INTEGER PRIMARY KEY,
+    Artist_id INTEGER PRIselvi KEY,
     Movie_id INTEGER FOREIGN KEY,
     Skills TEXT,
     Role VARCHAR
@@ -80,7 +80,7 @@ VALUES(10, 1, "An Afghan");
 5. Movie can have multiple reviews and Review can belongs to a user
 
 CREATE TABLE Review(
-    Rating_id INTEGER PRIMARY KEY,
+    Rating_id INTEGER PRIselvi KEY,
     Review TEXT
 );
 INSERT INTO Review
@@ -92,15 +92,15 @@ VALUES(4,"Blockbuster");
 
 
 CREATE TABLE User_details(
-    Reviewer_id INTEGER PRIMARY KEY,
+    Reviewer_id INTEGER PRIselvi KEY,
     Movie_id INTEGER FOREIGN KEY,
     User_name TEXT,
     User_email VARCHAR,
     Rating_id INTEGER FOREIGN KEY,
 );
 INSERT INTO User_details
-VALUES(1, 1, "vishwa", "vishwa@gmail.com", 4),
-VALUES(2, 1, "kumar", "kumar@gmail.com", 3),
-VALUES(3, 1, "mary", "mary@gmail.com", 2),
-VALUES(4, 1, "nandhini", "nandhini@gmail.com", 4),
-VALUES(5, 1, "karikalan", "karikalan@gmail.com", 3);
+VALUES(1, 1, "Sabari", "sabari@gmail.com", 4),
+VALUES(2, 1, "Danee", "danee@gmail.com", 3),
+VALUES(3, 1, "Selvi", "selvi@gmail.com", 2),
+VALUES(4, 1, "Priya", "priya@gmail.com", 4),
+VALUES(5, 1, "Jeeva", "jeeva@gmail.com", 3);
